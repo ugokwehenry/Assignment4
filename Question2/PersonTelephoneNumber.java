@@ -1,15 +1,34 @@
 public class PersonTelephoneNumber {
+	String areaCode;
+	String phoneNumber;
+
 	public PersonTelephoneNumber() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String GetPhoneNumber(Person person)
+	public String GetPhoneNumber()
 	{
-		if (person.areaCode != null && person.areaCode != "")
+		if (areaCode != null && areaCode != "")
 		{
-			return "(" + person.areaCode + ") " + person.phoneNumber; 
+			return "(" + areaCode + ") " + phoneNumber; 
 		}
-		return person.phoneNumber;
+		return phoneNumber;
+	}
+
+	public String getAreaCode() {
+		return areaCode;
+	}
+
+	public void setAreaCode(String areaCode) {
+		this.areaCode = areaCode;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 }

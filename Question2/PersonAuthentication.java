@@ -1,17 +1,20 @@
 public class PersonAuthentication {
 
+	String userName;
+	String password;
+
 	public PersonAuthentication() {
 	}
 
-	public boolean AuthenticateUser(Person person)
+	public boolean AuthenticateUser()
 	{
-		return (person.userName.equals("joe") && person.password.equals("joepass"));
+		return (userName.equals("joe") && password.equals("joepass"));
 	}
 
-	public void SetLoginCredentials(Person person, String userName, String password)
+	public void SetLoginCredentials( String userName, String password)
 	{
-		person.userName = userName;
-		person.password = password;
+		this.userName = userName;
+		this.password = password;
 	}
 
 }
